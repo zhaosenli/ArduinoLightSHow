@@ -5,79 +5,144 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arduino Lightshow</title>
     <style>
-        /* Reset and base styles */
-        * {
+        /* General Styles */
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            line-height: 1.6;
+            background: #f4f4f9;
+            color: #333;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-
-        /* Layout structure */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
+    
+        h1, h2, h3, h4 {
+            font-family: 'Poppins', sans-serif;
         }
-
-        /* Header section */
+    
+        a {
+            color: #ff6f61;
+            text-decoration: none;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+    
+        a:hover {
+            color: #ff9f43;
+            transform: scale(1.1);
+        }
+    
+        /* Header */
         .header {
-            background: #2c3e50;
+            background: linear-gradient(135deg, #ff6f61, #ff9f43);
             color: white;
-            padding: 2rem 0;
+            padding: 3rem 0;
             text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         }
-
+    
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+    
+        .header p {
+            font-size: 1.5rem;
+            margin-top: 0.5rem;
+        }
+    
         /* Navigation */
         .nav-bar {
-            background: #34495e;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .nav-links {
+            background: #ff9f43;
+            color: white;
+            padding: 1rem;
             display: flex;
             justify-content: center;
-            list-style: none;
-            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
-
+    
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+    
         .nav-links a {
             color: white;
-            text-decoration: none;
-            margin: 0 1.5rem;
-            transition: color 0.3s ease;
+            font-size: 1.2rem;
+            font-weight: bold;
         }
-
+    
         .nav-links a:hover {
-            color: #3498db;
+            color: #ffeaa7;
         }
-
-        /* Content sections */
+    
+        /* Sections */
         .section {
-            margin: 3rem 0;
+            margin: 3rem auto;
             padding: 2rem;
-            background: #f9f9f9;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
         }
-
-        /* Responsive design */
-        @media (max-width: 768px) {
-            .nav-links {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .nav-links a {
-                margin: 0.5rem 0;
-                display: block;
-            }
-
-            .container {
-                padding: 10px;
-            }
+    
+        .section h2 {
+            font-size: 2rem;
+            color: #ff6f61;
+            margin-bottom: 1rem;
+        }
+    
+        .section h3 {
+            font-size: 1.5rem;
+            color: #ff9f43;
+            margin-bottom: 0.5rem;
+        }
+    
+        .section h4 {
+            font-size: 1.2rem;
+            color: #ff6f61;
+            margin-bottom: 0.5rem;
+        }
+    
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, #ff9f43, #ff6f61);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+            font-size: 1rem;
+        }
+    
+        .footer a {
+            color: #ffeaa7;
+            text-decoration: underline;
+        }
+    
+        .footer a:hover {
+            color: #1abc9c;
+        }
+    
+        /* Dark Mode */
+        body.dark-mode {
+            background: #1e1e2f;
+            color: #f4f4f9;
+        }
+    
+        body.dark-mode .header {
+            background: linear-gradient(135deg, #1abc9c, #3498db);
+        }
+    
+        body.dark-mode .nav-bar {
+            background: #1abc9c;
+        }
+    
+        body.dark-mode .section {
+            background: #2c2c3e;
+            color: #f4f4f9;
+        }
+    
+        body.dark-mode .footer {
+            background: linear-gradient(135deg, #3498db, #1abc9c);
         }
     </style>
 </head>
@@ -85,7 +150,7 @@
     <header class="header">
         <h1 id="mainTitle">Arduino Lightshow</h1>
         <img src="Screenshot 2025-04-08 122050.png" alt="Arduino Lightshow" style="max-width: 100%; height: auto; margin-top: 1rem;">
-        <p>id="tagline">Lucille likes Jason Qi</p>
+        <h1>Lucille likes Jason Qi</h1>
     </header>
 
     <nav class="nav-bar">
